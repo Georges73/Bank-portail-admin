@@ -8,27 +8,27 @@ export class UserService {
   constructor (private http:Http){}
 
   getUsers() {
-    let url = "http://localhost:8080/api/user/all";
+    let url = "https://customerside-bank-portal.herokuapp.com/api/user/all";
     return this.http.get(url, { withCredentials: true });
   }
 
    getPrimaryTransactionList(username: string) {
-     let url = "http://localhost:8080/api/user/primary/transaction?username="+username;
+     let url = "https://customerside-bank-portal.herokuapp.com/api/user/primary/transaction?username="+username;
     return this.http.get(url, { withCredentials: true });
    }
 
    getSavingsTransactionList(username: string) {
-     let url = "http://localhost:8080/api/user/savings/transaction?username="+username;
+     let url = "https://customerside-bank-portal.herokuapp.com/api/user/savings/transaction?username="+username;
     return this.http.get(url, { withCredentials: true });
    }
 
    enableUser (username: string) {
-     let url = "http://localhost:8080/api/user/"+username+"/enable";
+     let url = "https://customerside-bank-portal.herokuapp.com/api/user/"+username+"/enable";
      return this.http.get(url, { withCredentials: true });
    }
 
    disableUser (username: string) {
-     let url = "http://localhost:8080/api/user/"+username+"/disable";
+     let url = "https://customerside-bank-portal.herokuapp.com/api/user/"+username+"/disable";
      return this.http.get(url, { withCredentials: true });
    }
 
